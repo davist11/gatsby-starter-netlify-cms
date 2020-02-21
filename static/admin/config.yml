@@ -104,3 +104,19 @@ collections:
             fields:
               - {label: Name, name: name, widget: string, default: "Emmet"}
               - {label: Avatar, name: avatar, widget: image, default: "/img/emmet.jpg"}
+      - label: "Text Blocks"
+        name: "text-blocks"
+        widget: "relation"
+        multiple: true
+        collection: "text-blocks"
+        searchFields: ["title"]
+        valueField: "slug"
+        displayFields: ["title", "text"]
+
+  - name: "text-blocks"
+    label: "Text blocks"
+    folder: "src/pages/text-blocks"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Text", name: "text", widget: "text"}
